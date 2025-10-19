@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>See Your Soulmate’s Face – Psychic Sketch + Personal Story</title>
+  <meta name="description" content="Curious what your soulmate looks like? Discover a psychic sketch and personal story delivered fast. Learn how it works and get yours today." />
+
+  <!-- Open Graph / Pinterest Rich Pin Basics -->
+  <meta property="og:title" content="See Your Soulmate’s Face – Psychic Sketch + Personal Story" />
+  <meta property="og:description" content="Curious what your soulmate looks like? Discover a psychic sketch and personal story delivered fast. Learn how it works and get yours today." />
+  <!-- Swap this image URL for your hosted preview image (1000x1500 recommended for Pinterest). -->
+  <meta property="og:image" content="https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1000&fit=crop" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0b0b12;
+      --fg: #eaeaf0;
+      --muted: #b6b8c9;
+      --accent: #9a8cff; /* soft lavender/slate vibe */
+      --accent-2: #75ffe1; /* mint for subtle highlights */
+      --card: #141421;
+      --ok: #32d296;
+      --warn: #ffbb55;
+      --danger: #ff5e7c;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius-xl: 22px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:.6rem; background: linear-gradient(135deg, var(--accent), #7e6cff 60%, #6a5bff); color:#0a0a12; font-weight: 800; text-transform: none; letter-spacing:.2px; padding: 16px 22px; border-radius: 16px; box-shadow: var(--shadow); transition: transform .08s ease, box-shadow .2s ease, filter .2s ease; }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.05); box-shadow: 0 14px 40px rgba(112,98,255,.35); }
+    .btn--ghost { background: transparent; color: var(--fg); border: 1px solid #33364d; }
+    .pill { display:inline-block; border:1px solid #2b2d41; background:#101021; color: var(--muted); padding: 8px 12px; border-radius:999px; font-size: 13px; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-weight: 700; color: var(--accent-2); font-size: 12px; }
+    .muted { color: var(--muted); }
+    .card { background: linear-gradient(180deg, #131323, #0f0f1b); border:1px solid #23243a; border-radius: var(--radius-xl); box-shadow: var(--shadow); }
+    .grid { display:grid; gap:28px; }
+    .two { grid-template-columns: 1fr; }
+    .three { grid-template-columns: 1fr; }
+    @media (min-width: 880px) {
+      .two { grid-template-columns: 1.1fr .9fr; align-items: center; }
+      .three { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Header / Hero */
+    header { position: sticky; top:0; z-index: 12; background: rgba(11,11,18,.7); backdrop-filter: blur(8px); border-bottom: 1px solid #1d1e2b; }
+    header .row { display:flex; align-items:center; justify-content: space-between; padding: 14px 0; }
+    header .brand { display:flex; align-items:center; gap: 12px; font-weight: 800; }
+    header .brand .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 20px rgba(117,255,225,.6); }
+
+    .hero { padding: 48px 0 18px; }
+    .hero .wrap { display:grid; gap: 28px; grid-template-columns: 1fr; }
+    @media (min-width: 980px) { .hero .wrap { grid-template-columns: 1.1fr .9fr; align-items: center; } }
+
+    .h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: clamp(28px, 5vw, 54px); line-height: 1.06; margin: 12px 0 10px; }
+    .sub { font-size: clamp(15px, 2.2vw, 18px); color: var(--muted); }
+
+    .hero .cta-row { display:flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .hero .badges { display:flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+
+    .frame { border-radius: var(--radius-xl); overflow: hidden; border: 1px solid #262742; background: radial-gradient(1200px 600px at 80% -10%, rgba(154,140,255,.22), transparent 60%), #0d0d16; position: relative; }
+    .frame::after { content:""; position:absolute; inset:0; background: radial-gradient(500px 300px at 10% 0%, rgba(117,255,225,.10), transparent 40%); pointer-events:none; }
+
+    .illus { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+    .caption { padding: 10px 14px; font-size: 13px; color: var(--muted); border-top:1px solid #242641; background: #0c0c16; }
+
+    /* Sections */
+    section { padding: 48px 0; }
+    .section-title { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: clamp(22px, 3.6vw, 34px); margin: 0 0 10px; }
+    .lead { color: var(--muted); max-width: 70ch; }
+
+    .steps { counter-reset: step; }
+    .step { display:flex; gap: 16px; align-items:flex-start; padding: 18px; border: 1px solid #23243a; border-radius: 16px; background: linear-gradient(180deg, #121224, #0f0f1d); }
+    .step::before { counter-increment: step; content: counter(step); flex: 0 0 40px; height: 40px; border-radius: 12px; background: #1c1c2e; border:1px solid #2a2b46; display:grid; place-items:center; color: var(--accent); font-weight: 800; }
+
+    .features .item { padding: 20px; border:1px solid #23243a; border-radius: 16px; background: linear-gradient(180deg, #121224, #0f0f1d); }
+    .features .item h4 { margin: 0 0 6px; font-size: 18px; }
+    .features .item p { margin: 0; color: var(--muted); }
+
+    .testimonial { padding: 20px; border:1px solid #23243a; border-radius: 16px; background: linear-gradient(180deg, #121224, #0f0f1d); font-style: italic; }
+
+    .cta-panel { text-align: center; padding: 28px; border:1px solid #2a2c44; border-radius: var(--radius-xl); background: radial-gradient(800px 500px at 80% -10%, rgba(154,140,255,.18), transparent 50%), #10101b; }
+
+    .faq details { border:1px solid #23243a; border-radius: 14px; padding: 16px 18px; background: linear-gradient(180deg, #121224, #0f0f1d); }
+    .faq details + details { margin-top: 10px; }
+    .faq summary { cursor: pointer; font-weight: 700; }
+    .faq p { color: var(--muted); }
+
+    footer { padding: 28px 0 54px; color: #9a9db4; font-size: 13px; border-top: 1px solid #1a1b29; }
+    footer a { color: #b8baf0; text-decoration: underline; }
+    .disclosure { font-size: 12px; color: #9a9db4; margin-top: 8px; }
+
+    .highlight { color: var(--accent-2); font-weight: 700; }
+    .underline { text-decoration: underline; text-decoration-color: rgba(154,140,255,.65); text-underline-offset: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container row">
+      <div class="brand"><span class="dot"></span><span>Destiny Finder</span></div>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <!-- Replace HOP param in links below with your ClickBank nickname -->
+        <a class="pill" href="#getit">Get Yours in 24 Hours</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="eyebrow">Curious? This is for you</span>
+          <h1 class="h1">See Your Soulmate’s Face — <span class="underline">and the Story of How You’ll Meet</span></h1>
+          <p class="sub">A real artist creates a <strong>personalized sketch</strong> and a <strong>guided story</strong> based on your birth details. Delivered to your inbox. Many say it felt like getting a <em>glimpse of destiny</em>.</p>
+          <div class="cta-row">
+            <!-- ✨ IMPORTANT: Replace `hop=zzzzz` with your affiliate nickname. Keep UTM tags if you want tracking.  -->
+            <a id="getit" class="btn" href="https://www.soulmatestory.com/?hop=zzzzz&utm_source=pinterest&utm_medium=landing&utm_campaign=soulmate_sketch" target="_blank" rel="nofollow noopener">Reveal My Soulmate →</a>
+            <a class="btn btn--ghost" href="#how">How it works</a>
+          </div>
+          <div class="badges">
+            <span class="pill">Fast Delivery (24–48h)</span>
+            <span class="pill">Personalized Sketch + Story</span>
+            <span class="pill">Private Email Delivery</span>
+          </div>
+          <p class="disclosure">Affiliate disclosure: If you purchase through my link, I may earn a commission at no extra cost to you. Entertainment purposes only.</p>
+        </div>
+
+        <div class="frame card">
+          <!-- Use your own hosted image for best control; this Unsplash fallback is fine for demo. -->
+          <img class="illus" src="file:///C:/Users/Jay/Downloads/sketch1.JPG" alt="Mystical portrait illustration evoking a soulmate sketch" />
+          <div class="caption">“I couldn’t stop staring — the sketch looked <span class="highlight">eerily familiar</span>.” – Reader note</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="lead">It’s simple and private. Share a few details, receive a hand‑drawn sketch and a personalized meeting‑story in your inbox.</p>
+        <div class="grid two steps" style="margin-top:18px;">
+          <div class="step">
+            <div>
+              <h4>Tell them about you</h4>
+              <p class="muted">Enter your name, birth details, and any prompts that matter to you. This helps tailor the reading and sketch.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>They create your sketch + story</h4>
+              <p class="muted">A real artist produces a portrait sketch and a written story about how you’re likely to cross paths.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h4>Delivered to your inbox</h4>
+              <p class="muted">You’ll receive your files in 24–48h. Many people save the sketch as a reminder to <em>recognize the moment</em> when it arrives.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET / BENEFITS -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">What You’ll Receive</h2>
+        <div class="grid three features" style="margin-top:18px;">
+          <div class="item">
+            <h4>Personalized Portrait</h4>
+            <p>A soulmate sketch rendered for <em>you</em>. Keep it private or share it with a friend — it’s yours to keep.</p>
+          </div>
+          <div class="item">
+            <h4>Guided Meeting Story</h4>
+            <p>A written narrative of where, when, and how you’re likely to meet — clues to help you spot the moment.</p>
+          </div>
+          <div class="item">
+            <h4>Fast, Discreet Delivery</h4>
+            <p>Receive everything by email within 24–48 hours. No awkward calls, no mailing address needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF / NOTES -->
+    <section>
+      <div class="container grid two">
+        <div class="testimonial">“I rolled my eyes at first. Then I compared the sketch to someone I’d just met… let’s just say my jaw dropped.”</div>
+        <div class="testimonial">“The story gave me goosebumps. I actually ran into a scene that matched the description a week later.”</div>
+      </div>
+    </section>
+
+    <!-- CTA PANEL -->
+    <section>
+      <div class="container">
+        <div class="cta-panel">
+          <h3 class="section-title" style="margin-bottom:6px;">Ready to See Your Soulmate?</h3>
+          <p class="lead" style="margin: 0 auto 16px;">Tap below to order your private sketch and story now. If it’s not for you, you can simply ignore it — but you might never stop wondering.</p>
+          <div style="display:flex; gap:12px; justify-content:center; flex-wrap: wrap; margin-top: 12px;">
+            <a class="btn" href="https://www.soulmatestory.com/?hop=zzzzz&utm_source=pinterest&utm_medium=landing&utm_campaign=soulmate_sketch" target="_blank" rel="nofollow noopener">Get My Soulmate Sketch →</a>
+            <a class="btn btn--ghost" href="#faq">Questions? See FAQ</a>
+          </div>
+          <p class="disclosure">Entertainment purposes only. Results may vary.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq" style="margin-top: 12px;">
+          <details>
+            <summary>Is this real?</summary>
+            <p>It’s a creative, intuitive service intended for entertainment. Many people enjoy it for the sense of clarity and fun — treat it as a meaningful keepsake and see what resonates.</p>
+          </details>
+          <details>
+            <summary>How fast is delivery?</summary>
+            <p>Typically 24–48 hours by email after you submit your details. Check your spam folder just in case.</p>
+          </details>
+          <details>
+            <summary>Can I gift it?</summary>
+            <p>Yes — it’s a unique gift idea. You can order for someone else if you have their details (or send them this page).</p>
+          </details>
+          <details>
+            <summary>Will the sketch match someone I know?</summary>
+            <p>Some people report uncanny similarities — others see it as a symbol of the person they’ll meet. Either way, many find it inspiring.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; flex-direction: column; gap: 6px;">
+        <div>© <span id="y"></span> Destiny Finder. All rights reserved.</div>
+        <div class="disclosure">This site participates in affiliate programs and may earn a commission on qualifying purchases. This content is for entertainment purposes only and does not offer professional advice.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
