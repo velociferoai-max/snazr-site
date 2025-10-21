@@ -1,1 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guide to Pro Se Civil Litigation — by Angela Gomez</title>
+  <meta name="description" content="A clear, practical guide for navigating civil court without a lawyer. Written by Angela Gomez — mother of three, AI contractor, and author of three books." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Guide to Pro Se Civil Litigation — by Angela Gomez">
+  <meta property="og:description" content="A clear, practical guide for navigating civil court without a lawyer.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="" />
+
+  <style>
+    :root{
+      --bg:#0b1220;           /* page background */
+      --ink:#0f172a;          /* dark text */
+      --muted:#5b6477;        /* muted text */
+      --card:#0e1628;         /* card background */
+      --panel:#111a30;        /* panel background */
+      --ring:rgba(56,189,248,.4);
+      --brand:#38bdf8;        /* cyan */
+      --brand-2:#a78bfa;      /* violet */
+      --white:#ffffff;
+      --shadow:0 10px 30px rgba(2,6,23,.35);
+      --rad:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: #e8eefc;
+      background:
+        radial-gradient(1200px 600px at 90% -10%, rgba(56,189,248,.12), transparent 60%),
+        radial-gradient(900px 600px at -10% 40%, rgba(167,139,250,.12), transparent 60%),
+        var(--bg);
+      line-height:1.7;
+    }
+    a{color:var(--brand); text-decoration: none}
+    a:hover{text-decoration: underline}
+
+    .container{max-width: 1100px; margin: 0 auto; padding: 24px 20px 64px}
+    .hero{display:grid; gap:24px; align-items:center; grid-template-columns: 1fr; margin-top: 10px}
+    @media(min-width: 980px){ .hero{grid-template-columns: 1.15fr .85fr; gap:40px} }
+
+    .badge{display:inline-flex; align-items:center; gap:.45rem; padding:.35rem .65rem; border-radius:999px; background:rgba(56,189,248,.12); color:#cfefff; border:1px solid rgba(56,189,248,.35); font-weight:700; letter-spacing:.25px; font-size:.8rem}
+    .headline{font-size:clamp(1.9rem, 1.3rem + 2.6vw, 3rem); margin:.4rem 0 .6rem; line-height:1.15}
+    .sub{color:#c9d7ff; font-size:1.1rem; max-width: 58ch}
+
+    .cta{
+      display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+      background:linear-gradient(135deg, var(--brand), var(--brand-2));
+      color:var(--white); border: none; padding: .95rem 1.3rem; font-weight:800; letter-spacing:.35px;
+      border-radius: 999px; box-shadow: 0 10px 22px var(--ring); cursor:pointer; text-decoration:none;
+      transition: transform .08s ease, filter .15s ease, box-shadow .2s ease;
+    }
+    .cta:hover{transform:translateY(-1px); filter:brightness(1.05); box-shadow: 0 14px 26px var(--ring)}
+    .cta.small{padding:.75rem 1rem; font-weight:700}
+
+    .cover{
+      border-radius: 14px; width: 100%; max-width: 360px; aspect-ratio: 3/4; margin: 0 auto;
+      background:linear-gradient(160deg,#0f172a,#111a30 40%, #1f2b4a);
+      border:1px solid rgba(255,255,255,.08); box-shadow: var(--shadow); position:relative; overflow:hidden;
+      display:grid; place-items:center; padding:18px;
+    }
+    .cover-inner{display:grid; place-items:center; text-align:center; padding:12px}
+    .cover h3{margin: 0; font-size: 1.2rem; color:#e4ecff; opacity:.95}
+    .cover h2{margin: .35rem 0; font-size: 1.8rem; line-height:1.1}
+    .cover p{color:#bcd2ff; margin:.45rem 0 0}
+    .ribbon{position:absolute; top:14px; left:14px; background:#10b981; color:#06221a; font-weight:800; padding:.25rem .55rem; border-radius:8px; font-size:.77rem; border:1px solid rgba(16,185,129,.5)}
+
+    .panel{background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: var(--rad); padding: 18px; box-shadow: var(--shadow)}
+    .grid{display:grid; gap:14px; grid-template-columns: 1fr}
+    @media(min-width:900px){ .grid{grid-template-columns: repeat(3, 1fr);} }
+
+    .check{display:flex; align-items:flex-start; gap:.7rem; padding:.65rem .75rem; background: rgba(56,189,248,.08); border:1px solid rgba(56,189,248,.18); border-radius: 12px}
+
+    h2.section{font-size: clamp(1.35rem, 1.1rem + 1vw, 1.8rem); margin: 30px 0 10px}
+
+    .two{display:grid; gap:16px; grid-template-columns: 1fr}
+    @media(min-width:980px){ .two{grid-template-columns: 1.2fr .8fr} }
+
+    .bio{color:#d6def7}
+    .muted{color:#a9b4d1}
+
+    footer{margin-top:40px; color:#8fa0c8; font-size:.95rem}
+    .legal{opacity:.8}
+
+    .price{font-weight:900; font-size:1.8rem}
+    .strike{opacity:.55; text-decoration: line-through; margin-right:.35rem}
+
+    /* FAQ */
+    details{background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding: .9rem 1rem}
+    details + details{margin-top:.6rem}
+    summary{cursor:pointer; font-weight:700}
+
+    /* Table style for inside-the-book bullets */
+    .bullets{display:grid; grid-template-columns: 1fr; gap:.55rem; margin:.8rem 0}
+    @media(min-width:700px){ .bullets{grid-template-columns: 1fr 1fr; } }
+    .bullet{padding:.5rem .65rem; border:1px solid rgba(255,255,255,.12); border-radius:10px; background: rgba(255,255,255,.03)}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="badge">New Edition • Practical Self‑Help Legal Guide</span>
+        <h1 class="headline">Represent yourself with confidence.<br>Navigate civil court—without getting lost.</h1>
+        <p class="sub"><em>Guide to Pro Se Civil Litigation</em> gives you a clear roadmap: what to file, when to file it, and how to keep calm, organized, and persuasive every step of the way.</p>
+        <div style="display:flex; gap:.7rem; flex-wrap:wrap; margin-top: 16px">
+          <a class="cta" href="https://shop.ingramspark.com/b/084?params=vT1BUeEVc95VFogFdsENBBIoFnhyqJppYG2fRxQYyuD" target="_blank" rel="noopener">Buy the Book</a>
+          <a class="cta small" style="background:rgba(167,139,250,.25); border:1px solid rgba(167,139,250,.4)" href="#inside">See What's Inside</a>
+        </div>
+      </div>
+      <div>
+        <!-- If you have a hosted cover image, replace the cover block below with: <img class="cover" src="YOUR-COVER-URL.jpg" alt="Guide to Pro Se Civil Litigation book cover"> -->
+        <div class="cover" aria-label="Book cover placeholder">
+          <span class="ribbon">Paperback</span>
+          <div class="cover-inner">
+            <h3>Angela Gomez</h3>
+            <h2>Guide to Pro Se<br>Civil Litigation</h2>
+            <p>Step‑by‑step instructions, checklists & templates</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <h2 class="section">This guide helps you…</h2>
+    <div class="grid">
+      <div class="check"><span>✅</span><div><strong>Understand the process</strong><br><span class="muted">From complaint to judgment—no law degree required.</span></div></div>
+      <div class="check"><span>✅</span><div><strong>Write with clarity</strong><br><span class="muted">Follow sample motions and filings that judges actually read.</span></div></div>
+      <div class="check"><span>✅</span><div><strong>Hit every deadline</strong><br><span class="muted">Track what to file and when with simple timelines.</span></div></div>
+    </div>
+
+    <!-- WHAT'S INSIDE -->
+    <section id="inside" class="panel" style="margin-top:18px">
+      <h2 class="section" style="margin-top:0">What’s inside</h2>
+      <div class="bullets">
+        <div class="bullet">Court structure 101 and where your case fits</div>
+        <div class="bullet">Pleadings explained: complaints, answers, affirmative defenses</div>
+        <div class="bullet">Motions that matter and when to use them</div>
+        <div class="bullet">Discovery basics: interrogatories, requests for production & admissions</div>
+        <div class="bullet">Hearing & mediation preparation checklists</div>
+        <div class="bullet">Organization systems to keep documents and dates straight</div>
+      </div>
+      <p class="muted" style="margin:.6rem 0 0">Plus: practical writing tips and plain‑English definitions throughout.</p>
+    </section>
+
+    <!-- AUTHOR BIO -->
+    <section class="two">
+      <div class="panel">
+        <h2 class="section" style="margin-top:0">About the Author</h2>
+        <p class="bio">Angela Gomez is a mother of three and works as a contractor on various AI projects. She has authored three books — <em>Guide to Pro Se Civil Litigation</em>, <em>Guide to Pro Se Civil Litigation: Research and Writing</em>, and <em>Law School Dropout</em>. She enjoys cooking and reading in her spare time.</p>
+        <div style="display:flex; gap:.7rem; flex-wrap:wrap; margin-top:6px">
+          <a class="cta small" href="https://shop.ingramspark.com/b/084?params=vT1BUeEVc95VFogFdsENBBIoFnhyqJppYG2fRxQYyuD" target="_blank" rel="noopener">Buy Now</a>
+        </div>
+      </div>
+      <aside class="panel">
+        <h2 class="section" style="margin-top:0">Also by Angela</h2>
+        <ul>
+          <li><em>Guide to Pro Se Civil Litigation: Research and Writing</em></li>
+          <li><em>Law School Dropout</em></li>
+        </ul>
+        <p class="muted">Add store links for these titles here later.</p>
+      </aside>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section class="panel" style="margin-top:18px">
+      <h2 class="section" style="margin-top:0">Get your copy</h2>
+      <p class="muted">Secure checkout on the publisher’s store.</p>
+      <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap">
+        <div class="price"><span class="strike"></span><span>Buy Today</span></div>
+        <a class="cta" href="https://shop.ingramspark.com/b/084?params=vT1BUeEVc95VFogFdsENBBIoFnhyqJppYG2fRxQYyuD" target="_blank" rel="noopener" aria-label="Buy Guide to Pro Se Civil Litigation">Buy the Book</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <h2 class="section">FAQ</h2>
+    <details>
+      <summary>Is this book legal advice?</summary>
+      <p class="muted">No. It’s an educational resource to help you understand the process and communicate more clearly. For advice specific to your case, consult a licensed attorney in your jurisdiction.</p>
+    </details>
+    <details>
+      <summary>Does this replace a lawyer?</summary>
+      <p class="muted">It’s designed for people representing themselves or working alongside counsel to stay organized and informed.</p>
+    </details>
+    <details>
+      <summary>Do I need to know legal jargon?</summary>
+      <p class="muted">No. Terms are explained in plain English with examples.</p>
+    </details>
+
+    <footer>
+      <p class="legal">© <span id="y"></span> Angela Gomez. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Optional: add a hosted cover URL for social cards and the hero. -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured Data (JSON‑LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Guide to Pro Se Civil Litigation",
+    "author": {
+      "@type": "Person",
+      "name": "Angela Gomez"
+    },
+    "workExample": {
+      "@type": "Book",
+      "bookFormat": "EBook",
+      "potentialAction": {
+        "@type": "BuyAction",
+        "target": "https://shop.ingramspark.com/b/084?params=vT1BUeEVc95VFogFdsENBBIoFnhyqJppYG2fRxQYyuD"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://shop.ingramspark.com/b/084?params=vT1BUeEVc95VFogFdsENBBIoFnhyqJppYG2fRxQYyuD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+</body>
+</html>
 
